@@ -10,8 +10,6 @@ import java.util.Arrays;
 
 @Component
 public class JwtKeyProvider {
-
-
     private static final String SECRET_KEY = Arrays.toString("in5uCIgQF".getBytes(StandardCharsets.UTF_8));;
 
     public SecretKey getSigningKey() {

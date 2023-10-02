@@ -7,6 +7,8 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -16,6 +18,7 @@ import java.util.Date;
 import java.util.Optional;
 
 @Component
+//@ComponentScan("com.example.inventorymanagementservice.components.tokens")
 public class JwtTokenProvider {
     public static Logger logger = LogManager.getLogger("com.example.inventorymanagementservice");
 
