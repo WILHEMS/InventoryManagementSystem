@@ -27,7 +27,8 @@ public class JwtTokenProvider {
     @Autowired
     private UserRepository userRepository;
 
-    @Value("${jwt.expirationTime}")
+//    @Value("${jwt.expirationTime}")
+    @Value("3600000")
     private long expirationTime;
 
     public String generateToken(User user) {
