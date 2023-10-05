@@ -1,5 +1,6 @@
 package com.example.inventorymanagementservice.components.presentation.controllers;
 
+import com.example.inventorymanagementservice.components.business.services.ReportService;
 import com.example.inventorymanagementservice.components.business.services.UserManagementService;
 import com.example.inventorymanagementservice.components.presentation.response_bodies.implementation.user.*;
 import com.example.inventorymanagementservice.components.presentation.response_bodies.interfaces.UserResponse;
@@ -7,18 +8,25 @@ import com.example.inventorymanagementservice.components.persistence.entities.Us
 import com.example.inventorymanagementservice.components.presentation.request_bodies.user.UserDeleteRequestBody;
 import com.example.inventorymanagementservice.components.presentation.request_bodies.user.UserLoginRequestBody;
 import com.example.inventorymanagementservice.components.presentation.request_bodies.user.UserUpdateRequestBody;
+import net.sf.jasperreports.engine.JRException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.FileNotFoundException;
 
 
 @RestController
 public class UserController {
 
     private UserManagementService userManagementService;
+    @Autowired
+    private ReportService reportService;
 
-    public UserController(UserManagementService userManagementService) {
+    public UserController(UserManagementService userManagementService, ReportService reportService) {
         this.userManagementService = userManagementService;
+        this.reportService = reportService;
     }
 
     /**
@@ -151,5 +159,14 @@ public class UserController {
         /*return the response*/
         return new ResponseEntity<>(userResponse, HttpStatus.OK);
 
+    }
+    /**
+     * JasperReportGeneration.
+     * The Request body must contain the properties;
+     * format - the format of the report.
+     * @param format-  the body of the request.*/
+    @GetMapping("/report/{format}")
+    public String generatedReport(@PathVariable String format) throws JRException, FileNotFoundException {
+        return reportService.exportUserReport(format);
     }
 }
