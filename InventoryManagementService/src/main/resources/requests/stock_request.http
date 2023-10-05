@@ -1,0 +1,37 @@
+### stock add
+POST {{host}}/stock/add
+Content-Type: application/json
+
+{
+  "location": {
+    "isle": 4,
+    "section": "secA"
+  },
+  "name": "sufuria",
+  "code": "14256414567",
+  "price": 105.0,
+  "count": 32
+}
+
+### delete stock
+DELETE {{host}}/stock/delete/spoon
+Content-Type: application/json
+
+### update stock
+PUT {{host}}/stock/update
+Content-Type: application/json
+
+{
+  "itemName": "sufuria",
+  "itemCode": "123456987",
+  "price": 600.0,
+  "count": 45,
+  "location": {
+    "section": "sec3",
+    "isle": 4
+  }
+}
+
+### get stock
+GET {{host}}/stock/fetch?item_name=sufuria
+Content-Type: application/json
