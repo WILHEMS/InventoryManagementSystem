@@ -1,14 +1,17 @@
 package com.example.inventorymanagementservice.components.presentation.controllers;
 
 import com.example.inventorymanagementservice.components.business.services.StockManagementService;
+import com.example.inventorymanagementservice.components.business.services.StockReportService;
 import com.example.inventorymanagementservice.components.presentation.request_bodies.stock.StockAddRequestBody;
 import com.example.inventorymanagementservice.components.presentation.response_bodies.implementation.stock.*;
 import com.example.inventorymanagementservice.components.persistence.entities.Stock;
+import net.sf.jasperreports.engine.JRException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 
@@ -16,11 +19,13 @@ import java.util.List;
 public class StockController {
 
     private StockManagementService stockManagementService;
+    private StockReportService stockReportService;
 
     /*inject the service*/
     @Autowired
-    public StockController(StockManagementService stockManagementService) {
+    public StockController(StockManagementService stockManagementService, StockReportService stockReportService) {
         this.stockManagementService = stockManagementService;
+        this.stockReportService = stockReportService;
     }
 
     @PostMapping(value = {"/stock/add"}, consumes = {"application/json"}, produces = {"application/json"})
@@ -122,7 +127,15 @@ public class StockController {
         stockResponse.setStockList(stockList);
 
         return new ResponseEntity<>(stockResponse, HttpStatus.OK);
-
+    }
+    /**
+     * JasperReportGeneration.
+     * The Request body must contain the properties;
+     * format - the format of the report.
+     * @param format-  the body of the request.*/
+    @GetMapping("/stockReport/{format}")
+    public String generatedReport(@PathVariable String format) throws JRException, FileNotFoundException {
+        return stockReportService.exportStockReport(format);
     }
 
 }
