@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8290290-2770-4edc-b162-70a8d3679428" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_5_2023_1_45_PM_[Changes]1/ReportController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_5_2023_1_45_PM_[Changes]1/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_5_2023_1_45_PM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_5_2023_1_45_PM__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/presentation/controllers/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/presentation/controllers/StockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/presentation/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/presentation/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/JasperReports/UsersReport/UsersReport.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/JasperReports/UsersReport/UsersReport.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/requests/batch_requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/requests/batch_requests.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryManagementService/target/classes/JasperReports/UsersReport/UsersReport.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/target/classes/JasperReports/UsersReport/UsersReport.jrxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -165,7 +165,7 @@ public class UserController {
      * The Request body must contain the properties;
      * format - the format of the report.
      * @param format-  the body of the request.*/
-    @GetMapping("/report/{format}")
+    @GetMapping("/userReport/{format}")
     public String generatedReport(@PathVariable String format) throws JRException, FileNotFoundException {
         return reportService.exportUserReport(format);
     }

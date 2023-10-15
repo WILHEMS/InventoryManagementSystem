@@ -61,7 +61,7 @@ q<?xml version="1.0" encoding="UTF-8"?>
                 <textElement textAlignment="Center">
                     <font size="14" isBold="true"/>
                 </textElement>
-                <text><![CDATA[Id]]></text>
+                <text><![CDATA[Reg Date]]></text>
             </staticText>
             <staticText>
                 <reportElement mode="Opaque" x="92" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f829a483-fb82-45e6-a556-8113c09e1b7b">
