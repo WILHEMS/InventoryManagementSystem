@@ -23,7 +23,8 @@ public class ReportService {
         this.userRepository = userRepository;
     }
     public  String exportUserReport(String reportFormat) throws FileNotFoundException, JRException {
-        String path = "C:\\Users\\Public\\Documents\\";
+        //String path = "C:\\Users\\Public\\Documents\\";
+        String path = "C:\\Users\\user\\Documents\\Reports";
         List<User> users = userRepository.findAll();
         File userFile = ResourceUtils.getFile("classpath:JasperReports/UsersReport/UsersReport.jrxml");
         JasperDesign jasperDesign;
