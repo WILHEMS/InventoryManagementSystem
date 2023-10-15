@@ -6,21 +6,19 @@
     <property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="521"/>
     <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>-->
 
-    <field name="registrationDate" class="java.time.LocalDateTime">
+    <field name="itemName" class="java.lang.String">
     </field>
-    <field name="username" class="java.lang.String">
+    <field name="itemCode" class="java.lang.String">
 
     </field>
-    <field name="firstName" class="java.lang.String">
+    <field name="itemCount" class="java.lang.Integer">
 
     </field>
-    <field name="lastName" class="java.lang.String">
+    <field name="itemPrice" class="java.math.BigDecimal">
 
     </field>
-    <field name="contact" class="java.lang.String">
-    </field>
-    <field name="role" class="java.lang.String">
-    </field>
+    <!--<field name="location" class="com.example.inventorymanagementservice.components.persistence.entities.ItemLocation">
+    </field>-->
 
     <background>
         <band/>
@@ -34,14 +32,14 @@
                     <textElement>
                         <font size="34" isBold="true"/>
                     </textElement>
-                    <text><![CDATA[IMS USERS]]></text>
+                    <text><![CDATA[IMS STOCKS]]></text>
                 </staticText>
                 <staticText>
                     <reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="26f6fedf-c3ad-4344-a954-1e756f06454d"/>
                     <textElement textAlignment="Right">
                         <font size="14" isBold="false"/>
                     </textElement>
-                    <text><![CDATA[Users report]]></text>
+                    <text><![CDATA[Stock report]]></text>
                 </staticText>
             </frame>
         </band>
@@ -61,7 +59,7 @@
                 <textElement textAlignment="Center">
                     <font size="14" isBold="true"/>
                 </textElement>
-                <text><![CDATA[Reg Date]]></text>
+                <text><![CDATA[Item Name]]></text>
             </staticText>
             <staticText>
                 <reportElement mode="Opaque" x="92" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f829a483-fb82-45e6-a556-8113c09e1b7b">
@@ -70,7 +68,7 @@
                 <textElement textAlignment="Center">
                     <font size="14" isBold="true"/>
                 </textElement>
-                <text><![CDATA[username]]></text>
+                <text><![CDATA[Item Code]]></text>
             </staticText>
             <staticText>
                 <reportElement mode="Opaque" x="184" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a3753fad-23ea-40a6-b425-e1f2f4f83910">
@@ -79,35 +77,27 @@
                 <textElement textAlignment="Center">
                     <font size="14" isBold="true"/>
                 </textElement>
-                <text><![CDATA[firstname]]></text>
+                <text><![CDATA[No of Items]]></text>
             </staticText>
             <staticText>
-                <reportElement mode="Opaque" x="276" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c53a0bc1-15db-411e-ab55-772689f7d7b0">
-                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fb6c6201-d56d-4063-ad4b-8f1fb76b4d68"/>
-                </reportElement>
-                <textElement textAlignment="Center">
-                    <font size="14" isBold="true"/>
-                </textElement>
-                <text><![CDATA[lastname]]></text>
-            </staticText>
-            <staticText>
-                <reportElement mode="Opaque" x="368" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4bf16e36-489c-47d1-a484-8176b8ac3b51">
+                <reportElement mode="Opaque" x="276" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4bf16e36-489c-47d1-a484-8176b8ac3b51">
                     <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f87f269e-be68-4524-b734-65b971d4246b"/>
                 </reportElement>
                 <textElement textAlignment="Center">
                     <font size="14" isBold="true"/>
                 </textElement>
-                <text><![CDATA[contact]]></text>
+                <text><![CDATA[Item Price]]></text>
             </staticText>
+            <!--
             <staticText>
-                <reportElement mode="Opaque" x="460" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5dfa209b-8f0e-43ef-85e4-91425a3875bd">
+                <reportElement mode="Opaque" x="368" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5dfa209b-8f0e-43ef-85e4-91425a3875bd">
                     <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1215f1a2-11d8-4048-b590-77065cd1f18e"/>
                 </reportElement>
                 <textElement textAlignment="Center">
                     <font size="14" isBold="true"/>
                 </textElement>
-                <text><![CDATA[role]]></text>
-            </staticText>
+                <text><![CDATA[location ID]]></text>
+            </staticText>-->
         </band>
     </columnHeader>
     <detail>
@@ -122,7 +112,7 @@
                 <textElement>
                     <font size="14"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{registrationDate}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{itemName}]]></textFieldExpression>
             </textField>
             <textField textAdjust="StretchHeight">
                 <reportElement x="92" y="0" width="92" height="20" uuid="02680b46-89a0-40d3-b4a2-2a47699c343b">
@@ -131,7 +121,7 @@
                 <textElement>
                     <font size="14"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{itemCode}]]></textFieldExpression>
             </textField>
             <textField textAdjust="StretchHeight">
                 <reportElement x="184" y="0" width="92" height="20" uuid="da5cb1c4-fabe-4ce8-b1e2-1ab91db38cac">
@@ -140,7 +130,7 @@
                 <textElement>
                     <font size="14"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+                <textFieldExpression><![CDATA[$F{itemCount}]]></textFieldExpression>
             </textField>
             <textField textAdjust="StretchHeight">
                 <reportElement x="276" y="0" width="92" height="20" uuid="14901499-f971-475a-87ac-b6b7f37b8c57">
@@ -149,8 +139,8 @@
                 <textElement>
                     <font size="14"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
-            </textField>
+                <textFieldExpression><![CDATA[$F{itemPrice}]]></textFieldExpression>
+            </textField><!--
             <textField textAdjust="StretchHeight">
                 <reportElement x="368" y="0" width="92" height="20" uuid="65e6c163-5e91-4453-af16-152de9d21629">
                     <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f87f269e-be68-4524-b734-65b971d4246b"/>
@@ -158,17 +148,8 @@
                 <textElement>
                     <font size="14"/>
                 </textElement>
-                <textFieldExpression><![CDATA[$F{contact}]]></textFieldExpression>
-            </textField>
-            <textField textAdjust="StretchHeight">
-                <reportElement x="460" y="0" width="92" height="20" uuid="b408f62b-017a-4b12-b04e-b8384d2d3012">
-                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1215f1a2-11d8-4048-b590-77065cd1f18e"/>
-                </reportElement>
-                <textElement>
-                    <font size="14"/>
-                </textElement>
-                <textFieldExpression><![CDATA[$F{role}]]></textFieldExpression>
-            </textField>
+                <textFieldExpression><![CDATA[$F{location}]]></textFieldExpression>
+            </textField>-->
         </band>
     </detail>
     <columnFooter>
@@ -185,7 +166,7 @@
                 <reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="2b5fcd1f-2cce-468c-af60-a9691ac7ec0e"/>
                 <textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
             </textField>
-            <textField pattern="EEEEE dd MMMMM yyyy">
+            <textField pattern="EEEEE dd MMMMM YYYY">
                 <reportElement x="0" y="4" width="100" height="13" uuid="a85f216a-5dd2-41fd-be63-e8af669b1246"/>
                 <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
             </textField>
