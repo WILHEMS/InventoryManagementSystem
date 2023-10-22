@@ -90,7 +90,7 @@
             </staticText>
             <!--
             <staticText>
-                <reportElement mode="Opaque" x="460" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5dfa209b-8f0e-43ef-85e4-91425a3875bd">
+                <reportElement mode="Opaque" x="368" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5dfa209b-8f0e-43ef-85e4-91425a3875bd">
                     <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1215f1a2-11d8-4048-b590-77065cd1f18e"/>
                 </reportElement>
                 <textElement textAlignment="Center">
@@ -166,7 +166,7 @@
                 <reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="2b5fcd1f-2cce-468c-af60-a9691ac7ec0e"/>
                 <textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
             </textField>
-            <textField pattern="EEEEE dd MMMMM yyyy">
+            <textField pattern="EEEEE dd MMMMM YYYY">
                 <reportElement x="0" y="4" width="100" height="13" uuid="a85f216a-5dd2-41fd-be63-e8af669b1246"/>
                 <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
             </textField>

@@ -23,7 +23,7 @@ public class StockReportService {
         this.stockRepository  = stockRepository;
     }
     public  String exportStockReport(String reportFormat) throws FileNotFoundException, JRException {
-        String path = "C:\\Users\\Public\\Documents\\";
+        String path = "C:\\Users\\user\\Documents";
         List<Stock> users = stockRepository.findAll();
         File userFile = ResourceUtils.getFile("classpath:JasperReports/StockReport/StockReport.jrxml");
         JasperDesign jasperDesign;
