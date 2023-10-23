@@ -9,16 +9,23 @@ import com.example.inventorymanagementservice.components.presentation.request_bo
 import com.example.inventorymanagementservice.components.presentation.request_bodies.user.UserLoginRequestBody;
 import com.example.inventorymanagementservice.components.presentation.request_bodies.user.UserUpdateRequestBody;
 import net.sf.jasperreports.engine.JRException;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.FileNotFoundException;
+//import java.util.logging.Logger;
+import java.util.logging.*;
 
 
 @RestController
 public class UserController {
+
+    //private final static Logger logger = (Logger) LoggerFactory.getLogger(UserController.class);
+    private static Logger logger =  LoggerFactory.getLogger(UserController.class);
 
     private UserManagementService userManagementService;
     @Autowired
@@ -46,13 +53,16 @@ public class UserController {
             "application/json"})
     @CrossOrigin(methods = {RequestMethod.POST})
     public ResponseEntity<UserRegistrationResponse> register(@RequestBody User requestBody){
+        logger.info("User Registration Process started");
 
         UserRegistrationResponse registrationResponse = new UserRegistrationResponse();
 
         if (!userManagementService.register(requestBody)){
+            logger.warn("User request to be registered already exists");
             registrationResponse.setMessage("user exists");
             return new ResponseEntity<>(registrationResponse, HttpStatus.OK);
         }
+        logger.info("User registered successfully");
 
         registrationResponse.setMessage("accepted");
         return new ResponseEntity<>(registrationResponse, HttpStatus.OK);
