@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8290290-2770-4edc-b162-70a8d3679428" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_5_2023_1_45_PM_[Changes]1/ReportController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_5_2023_1_45_PM_[Changes]1/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_5_2023_1_45_PM_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_5_2023_1_45_PM__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/presentation/controllers/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/presentation/controllers/StockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/presentation/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/presentation/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/JasperReports/UsersReport/UsersReport.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/JasperReports/UsersReport/UsersReport.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/requests/batch_requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/requests/batch_requests.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryManagementService/target/classes/JasperReports/UsersReport/UsersReport.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/target/classes/JasperReports/UsersReport/UsersReport.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/target/classes/com/example/inventorymanagementservice/components/persistence/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/target/classes/com/example/inventorymanagementservice/components/persistence/entities/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +25,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="kyle" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
@@ -43,29 +52,46 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
   <component name="ProjectId" id="2WFvhriFhirVXXTJnJbbaqeMSkX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Develhope Java/Items/InventoryManagementSystem&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/Users/kylerobins/Developer/Project/InventoryManagementSystem",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="InventoryManagementServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="InventoryManagementService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.inventorymanagementservice.InventoryManagementServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,7 +100,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696341265694</updated>
+      <workItem from="1698300214539" duration="2497000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
