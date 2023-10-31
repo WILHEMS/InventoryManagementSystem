@@ -1684,3 +1684,28 @@ Caused by: java.lang.ClassNotFoundException: com.example.inventorymanagementserv
 	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
 	... 41 common frames omitted
 
+2023-10-31T15:20:31.019+03:00  WARN 7661 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: eae0a5bd-7959-4409-a5ae-9f0138746a42
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-31T15:20:41.018+03:00  WARN 7661 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c050dd7c-58f8-40d5-bf1b-65566c0f202a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-31T15:48:38.746+03:00  WARN 8038 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 37b4f86d-3179-460f-8bc2-3e30d1f50b0b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-31T16:02:57.913+03:00  WARN 8860 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 891353b9-2410-418a-958a-b0ab2ae82ca5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-31T16:19:52.271+03:00  WARN 8860 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
