@@ -12,12 +12,14 @@ import net.sf.jasperreports.engine.JRException;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.FileNotFoundException;
 //import java.util.logging.Logger;
+import java.io.IOException;
 import java.util.logging.*;
 
 
@@ -176,7 +178,24 @@ public class UserController {
      * format - the format of the report.
      * @param format-  the body of the request.*/
     @GetMapping("/userReport/{format}")
+    public ResponseEntity<byte[]> generatedReport(@PathVariable String format) throws JRException, FileNotFoundException {
+        byte[] reportBytes = reportService.exportUserReport(format).getBody();
+
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.add("Content-Type", "application/pdf"); // Set the content type to PDF
+        responseHeaders.add("Content-Disposition", "attachment; filename=userReport.pdf"); // Force download with a specific filename
+
+        return ResponseEntity.ok()
+                .headers(responseHeaders)
+                .body(reportBytes);
+    }
+
+
+
+
+
+   /* @GetMapping("/userReport/{format}")
     public String generatedReport(@PathVariable String format) throws JRException, FileNotFoundException {
         return reportService.exportUserReport(format);
-    }
+    }*/
 }

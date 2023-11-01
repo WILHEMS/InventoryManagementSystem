@@ -7,6 +7,7 @@ import com.example.inventorymanagementservice.components.presentation.response_b
 import com.example.inventorymanagementservice.components.persistence.entities.Stock;
 import net.sf.jasperreports.engine.JRException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -134,8 +135,21 @@ public class StockController {
      * format - the format of the report.
      * @param format-  the body of the request.*/
     @GetMapping("/stockReport/{format}")
+    public ResponseEntity<byte[]> generatedReport(@PathVariable String format) throws JRException, FileNotFoundException {
+        byte[] reportBytes = stockReportService.exportStockReport(format).getBody();
+
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.add("Content-Type", "application/pdf"); // Set the content type to PDF
+        responseHeaders.add("Content-Disposition", "attachment; filename=stockReport.pdf"); // Force download with a specific filename
+
+        return ResponseEntity.ok()
+                .headers(responseHeaders)
+                .body(reportBytes);
+    }
+
+    /*@GetMapping("/stockReport/{format}")
     public String generatedReport(@PathVariable String format) throws JRException, FileNotFoundException {
         return stockReportService.exportStockReport(format);
-    }
+    }*/
 
 }
