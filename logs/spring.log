@@ -1,3 +1,6 @@
+2023-11-01T06:47:53.881+03:00  WARN 12644 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h37m50s317ms652µs300ns).
+2023-11-01T10:19:13.351+03:00  WARN 20844 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-01T10:19:17.564+03:00  WARN 20844 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
 2023-10-26T09:05:06.479+03:00 ERROR 6079 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
 
 java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
@@ -1683,4 +1686,3 @@ Caused by: java.lang.ClassNotFoundException: com.example.inventorymanagementserv
 	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
 	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
 	... 41 common frames omitted
-

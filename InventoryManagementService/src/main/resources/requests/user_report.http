@@ -1,0 +1,3 @@
+### get user report
+GET {{host}}/userReport/{format}
+Content-Type: application/json

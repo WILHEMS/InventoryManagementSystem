@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8290290-2770-4edc-b162-70a8d3679428" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/business/services/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/business/services/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/business/services/StockReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/business/services/StockReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/presentation/controllers/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/presentation/controllers/StockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/presentation/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/java/com/example/inventorymanagementservice/components/presentation/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/JasperReports/UsersReport/UsersReport.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/JasperReports/UsersReport/UsersReport.jrxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/target/classes/JasperReports/UsersReport/UsersReport.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/target/classes/JasperReports/UsersReport/UsersReport.jrxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryManagementService/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryManagementService/target/classes/com/example/inventorymanagementservice/components/persistence/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/target/classes/com/example/inventorymanagementservice/components/persistence/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/target/classes/com/example/inventorymanagementservice/components/business/services/ReportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/target/classes/com/example/inventorymanagementservice/components/business/services/ReportService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/target/classes/com/example/inventorymanagementservice/components/business/services/StockReportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/target/classes/com/example/inventorymanagementservice/components/business/services/StockReportService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/target/classes/com/example/inventorymanagementservice/components/presentation/controllers/StockController.class" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/target/classes/com/example/inventorymanagementservice/components/presentation/controllers/StockController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryManagementService/target/classes/com/example/inventorymanagementservice/components/presentation/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryManagementService/target/classes/com/example/inventorymanagementservice/components/presentation/controllers/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +38,7 @@
           <entry type="LOCAL">
             <value>
               <list>
-                <branch-info repo="$PROJECT_DIR$" source="kyle" />
+                <branch-info repo="$PROJECT_DIR$" source="Kelvin"
               </list>
             </value>
           </entry>
@@ -62,36 +69,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/Users/kylerobins/Developer/Project/InventoryManagementSystem",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "F:/Develhope Java/Items",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="InventoryManagementServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="InventoryManagementService" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.inventorymanagementservice.InventoryManagementServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

@@ -1,0 +1,3 @@
+### get stock report
+GET {{host}}/stockReport/{format}
+Content-Type: application/json
