@@ -5,6 +5,7 @@ import com.example.inventorymanagementservice.components.persistence.entities.Cu
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,7 +18,7 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping(value = {"/customer/add"}, consumes = {"application/json"}, produces = {"application/json"})
     @CrossOrigin(methods = RequestMethod.POST)
     public ResponseEntity<Customer> addCustomer(@RequestBody Customer customer){

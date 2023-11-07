@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.FileNotFoundException;
@@ -97,8 +98,8 @@ public class UserController {
         loginResponse.setUser(user);
         return new ResponseEntity<>(loginResponse, HttpStatus.OK);
     }
-
-    @GetMapping(value = "user/fetch", consumes = {"application/json", "text/plain"}, produces = {"application/json"})
+    //@PreAuthorize("hasAuthority('ADMIN')")
+    @GetMapping(value = "user/fetch", produces = {"application/json"})
     @CrossOrigin(methods = {RequestMethod.GET})
     public ResponseEntity<UserFetchResponse> fetch(@RequestParam(value = "username") String username){
         UserFetchResponse fetchResponse = new UserFetchResponse();
@@ -133,12 +134,13 @@ public class UserController {
             return new ResponseEntity<>(updateResponse, HttpStatus.OK);
         }
 
-        updateResponse.setMessage("successful");
+        updateResponse.setMessage("updated successfully");
         updateResponse.setUser(user);
 
         return new ResponseEntity<>(updateResponse, HttpStatus.OK);
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @DeleteMapping(value = "user/delete", consumes = {"application/json", "text/plain"}, produces = {"application/json"})
     @CrossOrigin(methods = {RequestMethod.DELETE})
     public ResponseEntity<UserDeleteResponse> delete(@RequestBody UserDeleteRequestBody requestBody){
@@ -155,7 +157,8 @@ public class UserController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @GetMapping(value = {"/user"}, consumes = {"application/json", "text/plain"}, produces = {"application/json"})
+    @PreAuthorize("hasAuthority('ADMIN')")
+    @GetMapping(value = {"/user"}, produces = {"application/json"})
     @CrossOrigin(methods = {RequestMethod.GET})
     public ResponseEntity<UserResponse> getUsers(){
 
@@ -177,6 +180,7 @@ public class UserController {
      * The Request body must contain the properties;
      * format - the format of the report.
      * @param format-  the body of the request.*/
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/userReport/{format}")
     public ResponseEntity<byte[]> generatedReport(@PathVariable String format) throws JRException, FileNotFoundException {
         byte[] reportBytes = reportService.exportUserReport(format).getBody();

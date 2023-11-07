@@ -7,6 +7,7 @@ import com.example.inventorymanagementservice.components.presentation.request_bo
 import com.example.inventorymanagementservice.components.presentation.request_bodies.user.UserLoginRequestBody;
 import com.example.inventorymanagementservice.components.presentation.request_bodies.user.UserUpdateRequestBody;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,6 +22,9 @@ public class UserManagementService {
     private AddressRepository addressRepository;
 
     @Autowired
+    BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @Autowired
     public UserManagementService(UserRepository userRepository, AddressRepository addressRepository) {
         this.userRepository = userRepository;
         this.addressRepository = addressRepository;
@@ -31,7 +35,8 @@ public class UserManagementService {
         /*check if the user exists*/
         if (this.userRepository.findUserByUsername(user.getUsername()) != null)
             return false;
-
+        String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
+        user.setPassword(encodedPassword);
         /*persist the address*/
         this.addressRepository.save(user.getAddress());
         /*persist the user*/
@@ -61,7 +66,7 @@ public class UserManagementService {
 
         User user = requestBody.getUser();
 
-        this.userRepository.deleteUserByUsernameAndPassword(requestBody.getUsername(), requestBody.getPassword());
+        this.userRepository.deleteUserByUsername(requestBody.getUsername());
         this.addressRepository.save(user.getAddress());
         this.userRepository.save(user);
 
@@ -72,7 +77,7 @@ public class UserManagementService {
     public boolean delete(UserDeleteRequestBody requestBody){
 
         /*delete user*/
-        this.userRepository.deleteUserByUsernameAndPassword(requestBody.getUsername(), requestBody.getPassword());
+        this.userRepository.deleteUserByUsername(requestBody.getUsername());
 
         return true;
     }
