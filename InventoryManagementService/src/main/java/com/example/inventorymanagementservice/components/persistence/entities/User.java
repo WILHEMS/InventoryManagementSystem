@@ -5,7 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * a user entity.
@@ -39,6 +41,5 @@ public class User {
 
     private int totalPoints;
 
-    private final LocalDateTime registrationDate = LocalDateTime.now();
-
+    private final LocalDate registrationDate = LocalDate.now();
 }

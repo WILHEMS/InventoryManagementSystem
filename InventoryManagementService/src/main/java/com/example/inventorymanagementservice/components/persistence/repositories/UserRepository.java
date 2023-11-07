@@ -5,6 +5,8 @@ import com.example.inventorymanagementservice.components.persistence.entities.Us
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Optional;
 //import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 //import org.springframework.data.rest.core.annotation.RestResource;
 //import org.springframework.web.bind.annotation.*;
@@ -22,5 +24,6 @@ public interface UserRepository extends JpaRepository<User, String > {
 
     User findUserByUsernameAndRole(String username, String role);
 
-    void deleteUserByUsernameAndPassword(String username, String password);
+    void deleteUserByUsername(String username);
+    Optional<User> findByUsername(String username);
 }

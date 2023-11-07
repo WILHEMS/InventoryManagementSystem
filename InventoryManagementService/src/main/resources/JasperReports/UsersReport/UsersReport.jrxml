@@ -6,7 +6,7 @@
     <property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="521"/>
     <property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>-->
 
-    <field name="registrationDate" class="java.time.LocalDateTime">
+    <field name="registrationDate" class="java.time.LocalDate">
     </field>
     <field name="username" class="java.lang.String">
 
